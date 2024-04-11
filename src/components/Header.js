@@ -37,6 +37,11 @@ const Header = () => {
           transition'>Contact</Link>
 
         </nav>
+        {/* socials */}
+        <Socials/>
+        {/* Mobile Nav */}
+        <MobileNav/>
+
       </div>
     </header>
 
