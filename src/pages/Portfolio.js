@@ -7,18 +7,33 @@ import Image3 from "../img/portfolio/3.png";
 import Image4 from "../img/portfolio/4.png";
 
 //import Link
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+
+//import motion
+import { motion } from 'framer-motion';
+//import transition
+import { transition1 } from '../transitions';
 
 const Portfolio = () => {
   return (
-    <section className="section">
+    <motion.section
+      initial={{ scale: 0, y: '100%' }}
+      animate={{ scale: 1, y: 0 }}
+      exit={{ scale: 0, y: '100%' }}
+      transition={transition1}
+      className="section">
       <div className="container mx-auto hf relative ">
         <div
           className="flex flex-col lg:flex-row h-full
         items-center justify-start gap-x-24 text-center
         lg:text-left pt-24 lg:pt-36 pb-8">
           {/*text*/}
-          <div className="flex flex-col lg:items-start">
+          <motion.div
+            initial={{ scale: 0, y: '-80%' }}
+            animate={{ scale: 1, y: 0 }}
+            exit={{ scale: 0, y: '-80%' }}
+            transition={transition1}
+            className="flex flex-col lg:items-start">
             <h1 className="h1">Portfolio</h1>
             <p className="mb-12 max-w-sm">
               Lorem Ipsum is simply dummy text of the printing and{" "}
@@ -34,7 +49,7 @@ const Portfolio = () => {
               passages, and more recently with desktop publishing software like
               Aldus PageMaker including versions of Lorem Ipsum.
             </p>
-          </div>
+          </motion.div>
           {/*Image grid*/}
           <div className="grid grid-cols-2 lg:gap-2">
             {/*image */}
@@ -77,7 +92,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

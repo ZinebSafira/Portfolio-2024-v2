@@ -22,6 +22,7 @@ const App = () => {
     <Header/>
     <AnimRoutes/>
    </Router>
+   {/*cursor */}
   
   </>
 };
