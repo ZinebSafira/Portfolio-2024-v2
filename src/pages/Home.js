@@ -29,7 +29,7 @@ const Home = () => {
           className='w-full pt-36 pb-14 lg:pt-0 lg:pb-0 
         lg:w-auto z-10 lg:absolute flex flex-col 
         justify-center items-center lg:items-start'>
-          <h1 className='h1 text-4xl lg:text-5xl font-bold mb-4'>Webdesigner, Front-end Developer<br /> & UX Researcher</h1>
+          <h1 className='h1 text-4xl lg:text-5xl font-bold mb-4'>UX-researcher<br /> & Front-end developer</h1>
           <p className='text-[26px] lg:text-[36px] font-primary mb-4 lg:mb-12'>Eindhoven, Netherlands</p>
           <Link to={'/Contact'} className='btn mb-[30px]'>Let's connect</Link>
         </motion.div>
@@ -41,7 +41,7 @@ const Home = () => {
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
             transition={transition1}
-            className='relative lg:-right-40
+            className='relative lg:-right-39
             overflow-hidden'>
             <motion.img
               whileHover={{ scale: 1.1 }}

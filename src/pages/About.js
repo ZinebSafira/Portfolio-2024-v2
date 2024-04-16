@@ -34,10 +34,17 @@ const About = () => {
             className='flex-1 pt-36 pb-14 lg:pt-0 lg:w-auto z-10 flex flex-col justify-center items-center lg:items-start'>
             <h1 className='h1'>About me</h1>
             <p className='mb-12 max-w-sm'>
-              Lorem Ipsum is simply dummy text of the printing and <b>typesetting industry. </b>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              <br />
-              <br />
-              when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
+
+
+              My name is <b>Zineb👋</b>, and I'm a 22-year-old student in my final year of ICT <b>Media Design at Fontys Hogeschool.</b>
+
+              With a passion for crafting beautiful websites and solving problems through design and improving user-experience, I'm on a journey to graduate in January 2025 with a Bachelor's in Information and Communication Technology, specializing in Media Design.
+              <br></br>
+              <br></br>
+              Based in Eindhoven, I've delved into various technologies including <b>HTML, CSS, JavaScript, Swift, and ReactNative</b>, and I'm currently expanding my skills into React and other modern tech stacks and for designing I use <b>figma.</b>
+
             </p>
             <Link to={'/portfolio'} className='btn'>View my work!</Link>
           </motion.div>
