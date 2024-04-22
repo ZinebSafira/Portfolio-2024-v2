@@ -6,6 +6,13 @@ import Image1 from "../img/portfolio/1.png";
 import Image2 from "../img/portfolio/2.png";
 import Image3 from "../img/portfolio/3.png";
 import Image4 from "../img/portfolio/4.png";
+import Saunakoning from '../img/portfolio/saunakoning.jpg'
+import Festivalzone from "../img/portfolio/Festivalzone2.png"
+import AMWVeranda from "../img/portfolio/AMWveranda.png"
+import EuropeVeranda from "../img/portfolio/EuropeVeranda.jpg"
+import DippedbyQueen from "../img/portfolio/dippedbyqueen.png"
+import SignedKits from "../img/portfolio/signedkits.png"
+import FontysLectoraat from "../img/portfolio/lectoraat.png"
 
 // Import motion and transition
 import { motion } from "framer-motion";
@@ -17,37 +24,52 @@ const projects = [
   {
     id: 1,
     title: "Saunakoning",
-    description: "This is Project 1",
-    img: Image1,
-    link: "/project1",
+    description: "Re-design & verbetering van bestaande website",
+    img: Saunakoning,
+    link: "../project1",
   },
   {
     id: 2,
     title: "Festivalzone",
-    description: "This is Project 2",
-    img: Image2,
+    description: "Mee-werkstage opdracht",
+    img: Festivalzone,
     link: "/project2",
   },
   {
     id: 3,
     title: "AMW-veranda",
-    description: "This is Project 3",
-    img: Image3,
+    description: "Re-design van een website",
+    img: AMWVeranda,
     link: "/project3",
   },
   {
     id: 4,
     title: "Europeveranda",
-    description: "This is Project 4",
-    img: Image4,
+    description: "Leerwerk-traject website",
+    img: EuropeVeranda,
     link: "/project4",
   },
   {
     id: 5,
     title: "Dipped by Queen",
-    description: "This is Project 4",
-    img: Image4,
-    link: "/project5",
+    description: "Start-up",
+    img: DippedbyQueen,
+    link: "../project5",
+  },
+
+  {
+    id: 6,
+    title: "Signed Kits",
+    description: "Design van social media posts, creëren van flyers",
+    img: SignedKits,
+    link: "../project6",
+  },
+  {
+    id: 7,
+    title: "Fontys Lectoraat - DIFLA",
+    description: "Verbeteren en onderzoek van een bestaande oplossing",
+    img: FontysLectoraat,
+    link: "../project7",
   },
   // Add more projects as needed
 ];
@@ -109,25 +131,26 @@ const Portfolio = () => {
               />
             </div>
           </div>
-
         </div>
-        {/* New grid section for projects with increased top margin */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 mt-12">
+        {/* Updated project grid section */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 p-6 mt-12">
           {projects.map((project) => (
-            <div key={project.id} className="shadow-lg rounded-lg p-4 bg-white">
+            <div key={project.id} className="shadow-lg rounded-lg overflow-hidden transition-shadow duration-300 hover:shadow-2xl">
               <img
                 src={project.img}
                 alt=""
-                className="w-full h-48 object-cover rounded"
+                className="w-full h-48 object-cover"
               />
-              <h2 className="text-xl font-bold mt-2">{project.title}</h2>
-              <p>{project.description}</p>
-              <button
-                className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                onClick={() => (window.location.href = project.link)}
-              >
-                View Project
-              </button>
+              <div className="p-4 bg-white">
+                <h2 className="text-xl font-bold">{project.title}</h2>
+                <p className="text-gray-600">{project.description}</p>
+                <button
+                  className="mt-4 bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
+                  onClick={() => (window.location.href = project.link)}
+                >
+                  View Project
+                </button>
+              </div>
             </div>
           ))}
         </div>
