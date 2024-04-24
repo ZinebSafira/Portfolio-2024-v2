@@ -6,7 +6,10 @@ import AnimRoutes from './components/AnimRoutes';
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // Hook to change the document title
   useEffect(() => {
+    document.title = "Z's Portfolio";  // Set the document title to "Z's Portfolio"
+
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       if (scrollTop > 0) {

@@ -4,7 +4,7 @@ import Home from '../pages/Home'
 import About from '../pages/About'
 import Portfolio from '../pages/Portfolio'
 import Contact from '../pages/Contact'
-import Project1 from '../pages/Project1'
+import Project3 from '../pages/Project3'
 
 
 //import routes route  & useLocation hook
@@ -22,7 +22,7 @@ const AnimRoutes = () => {
       <Route path='/About' element={<About />} />
       <Route path='/Portfolio' element={<Portfolio />} />
       <Route path='/Contact' element={<Contact/>} />
-      <Route path='/Project1' element={<Project1/>}/>
+      <Route path='/Project3' element={<Project3/>}/>
     </Routes>
     </AnimatePresence>
   );
