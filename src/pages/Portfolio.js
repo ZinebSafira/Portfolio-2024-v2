@@ -6,12 +6,12 @@ import Image1 from "../img/portfolio/1.png";
 import Image2 from "../img/portfolio/2.png";
 import Image3 from "../img/portfolio/3.png";
 import Image4 from "../img/portfolio/4.png";
-import Saunakoning from '../img/portfolio/saunakoning.jpg'
-import Festivalzone from "../img/portfolio/Festivalzone2.png"
-import AMWVeranda from "../img/portfolio/AMWveranda.png"
-import EuropeVeranda from "../img/portfolio/EuropeVeranda.jpg"
+import Saunakoning from '../img/portfolio/Saunakoning2.png'
+import Festivalzone from "../img/portfolio/Festivalzone3.png"
+import AMWVeranda from "../img/portfolio/amwveranda2.png"
+import EuropeVeranda from "../img/portfolio/EuropeVeranda2.png"
 import DippedbyQueen from "../img/portfolio/dippedbyqueen.png"
-import SignedKits from "../img/portfolio/signedkits.png"
+import SignedKits from "../img/portfolio/SignedKits.2.png"
 import FontysLectoraat from "../img/portfolio/lectoraat.png"
 
 // Import motion and transition
