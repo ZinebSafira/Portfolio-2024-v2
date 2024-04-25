@@ -42,7 +42,7 @@ const About = () => {
             <h1 className='h1'>About me</h1>
             <p className='mb-12 max-w-sm'>
 
-              My name is <b>Zineb👋</b>, and I'm a 22-year-old student in my final year of ICT <b>Media Design at Fontys Hogeschool.</b>
+              My name is <b>Zineb</b>, and I'm a 22-year-old student in my final year of ICT <b>Media Design at Fontys Hogeschool.</b>
 
               With a passion for crafting beautiful websites and solving problems through design and improving user-experience, I'm on a journey to graduate in January 2025 with a Bachelor's in Information and Communication Technology, specializing in Media Design.
               <br></br>

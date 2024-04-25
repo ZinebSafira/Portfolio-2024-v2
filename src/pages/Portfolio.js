@@ -49,13 +49,13 @@ const projects = [
     img: EuropeVeranda,
     link: "/project4",
   },
-  {
-    id: 5,
-    title: "Dipped by Queen",
-    description: "Start-up",
-    img: DippedbyQueen,
-    link: "../project5",
-  },
+  // {
+  //   id: 5,
+  //   title: "Dipped by Queen",
+  //   description: "Start-up",
+  //   img: DippedbyQueen,
+  //   link: "../project5",
+  // },
 
   {
     id: 6,
@@ -64,13 +64,13 @@ const projects = [
     img: SignedKits,
     link: "../project6",
   },
-  {
-    id: 7,
-    title: "Fontys Lectoraat - DIFLA",
-    description: "Verbeteren en onderzoek van een bestaande oplossing",
-    img: FontysLectoraat,
-    link: "../project7",
-  },
+  // {
+  //   id: 7,
+  //   title: "Fontys Lectoraat - DIFLA",
+  //   description: "Verbeteren en onderzoek van een bestaande oplossing",
+  //   img: FontysLectoraat,
+  //   link: "../project7",
+  // },
   // Add more projects as needed
 ];
 
@@ -94,9 +94,7 @@ const Portfolio = () => {
           >
             <h1 className="h1">Portfolio</h1>
             <p className="mb-12 max-w-sm">
-              Lorem Ipsum is simply dummy text of the printing and{" "}
-              <b>typesetting industry.</b> Lorem Ipsum has been the industry's
-              standard dummy text ever since the 1500s.
+              Explore my portfolio to see the range of projects I've worked on and get a glimpse of my skills and expertise in action.
             </p>
           </motion.div>
           {/*Image grid*/}

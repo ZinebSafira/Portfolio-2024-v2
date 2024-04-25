@@ -33,10 +33,11 @@ const Home = () => {
           <br></br>
           <br></br>
           <br></br>
-          <br></br>
-          <br></br>
-          <h1 className='h1 text-4xl lg:text-5xl font-bold mb-4'>UX-researcher<br /> &<br></br> Front-end developer</h1>
-          <p className='text-[26px] lg:text-[36px] font-primary mb-4 lg:mb-12'>Eindhoven, Netherlands</p>
+          <h1 className='h1 text-4xl lg:text-5xl font-bold mb-2'>UX-researcher &
+            <br></br>
+
+            Front-end developer</h1>
+          <p className='text-[26px] lg:text-[36px] font-primary mb-6 lg:mb-10'>Eindhoven, Netherlands</p>
           <Link to={'/Contact'} className='btn mb-[30px]'>Let's connect</Link>
         </motion.div>
         { /* image */}
