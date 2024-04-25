@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import { transition1 } from '../transitions';
 import ProjectBannerImg from '../img/projects/saunakoningimg.png'; // Ensure the image path is correct
 
+//import Link
+import { Link } from 'react-router-dom';
+
 const ProjectShowcase = () => {
     // Applying overflow-hidden to body
     React.useEffect(() => {

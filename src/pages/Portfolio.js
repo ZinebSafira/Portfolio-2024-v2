@@ -1,6 +1,10 @@
 import React from "react";
 import "../styles/Scrollbar.css"; // Import the CSS file for scrollbar styling
 
+
+//import Link
+import { Link } from 'react-router-dom';
+
 // Import images
 import Image1 from "../img/portfolio/1.png";
 import Image2 from "../img/portfolio/2.png";

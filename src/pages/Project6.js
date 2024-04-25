@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { transition1 } from '../transitions';
+//import Link
+import { Link } from 'react-router-dom';
 
 import SignedKits from '../img/projects/SignedKits.png';
 import SignedKits1 from '../img/projects/SignedKits - 1.png';
