@@ -5,7 +5,6 @@ import WomanImg from '../img/about/woman.png';
 import AlbertHeijnLogo from '../img/about/albert-heijn.png';
 import TuinexpressLogo from '../img/about/tuinexpress.png';
 
-
 const About = () => {
   const aboutRef = useRef(null);
   const logoRefs = useRef([]);
@@ -60,12 +59,12 @@ const About = () => {
           <div className="flex flex-col gap-y-12">
             <div className="relative lg:flex lg:justify-between lg:items-center" onMouseEnter={() => handleMouseEnter(0)} onMouseLeave={() => handleMouseLeave(0)}>
               <div className="order-2 lg:order-none lg:w-1/2 lg:pr-8">
-                <div className="w-6 h-6 bg-black rounded-full absolute left-1/2 top-0 lg:top-[calc(50%-4rem)] transform -translate-x-1/2"></div>
+                <div className="w-6 h-6 bg-black rounded-full absolute left-1/2 top-0 lg:top-[calc(50%-4.5rem)] transform -translate-x-1/2"></div>
                 <div className="mt-2 lg:text-right">
                   <h3 className="text-xl font-semibold">2017-2021</h3>
                   <h4 className="text-lg font-bold">Stock Clerk at Albert Heijn</h4>
                   <p className="text-sm md:text-base text-gray-700">Responsible for stocking shelves, assisting customers, and maintaining store cleanliness and organization.</p>
-                  <div className="absolute left-1/2 top-[calc(50%-4rem)] transform -translate-x-1/2 opacity-0 scale-0" ref={addToRefs}>
+                  <div className="absolute left-1/2 top-[calc(50%-6.5rem)] transform -translate-x-1/2 opacity-0 scale-0" ref={addToRefs}>
                     <img src={AlbertHeijnLogo} alt="Albert Heijn Logo" className="w-20 h-auto" />
                   </div>
                 </div>
@@ -75,12 +74,12 @@ const About = () => {
             <div className="relative lg:flex lg:justify-between lg:items-center" onMouseEnter={() => handleMouseEnter(1)} onMouseLeave={() => handleMouseLeave(1)}>
               <div className="hidden lg:block lg:w-1/2"></div>
               <div className="order-2 lg:order-none lg:w-1/2 lg:pl-8">
-                <div className="w-6 h-6 bg-black rounded-full absolute left-1/2 top-0 lg:top-[calc(50%-4rem)] transform -translate-x-1/2"></div>
+                <div className="w-6 h-6 bg-black rounded-full absolute left-1/2 top-0 lg:top-[calc(50%-4.5rem)] transform -translate-x-1/2"></div>
                 <div className="mt-2">
                   <h3 className="text-xl font-semibold">2021 - Present</h3>
                   <h4 className="text-lg font-bold">Fresh Food Employee at Albert Heijn</h4>
                   <p className="text-sm md:text-base text-gray-700">Since 2021, I've been working as a fresh food employee at Albert Heijn, responsible for handling fresh produce and ensuring top quality service.</p>
-                  <div className="absolute left-1/2 top-[calc(50%-4rem)] transform -translate-x-1/2 opacity-0 scale-0" ref={addToRefs}>
+                  <div className="absolute left-1/2 top-[calc(50%-6.5rem)] transform -translate-x-1/2 opacity-0 scale-0" ref={addToRefs}>
                     <img src={AlbertHeijnLogo} alt="Albert Heijn Logo" className="w-20 h-auto" />
                   </div>
                 </div>
@@ -88,12 +87,12 @@ const About = () => {
             </div>
             <div className="relative lg:flex lg:justify-between lg:items-center" onMouseEnter={() => handleMouseEnter(2)} onMouseLeave={() => handleMouseLeave(2)}>
               <div className="order-2 lg:order-none lg:w-1/2 lg:pr-8">
-                <div className="w-6 h-6 bg-black rounded-full absolute left-1/2 top-0 lg:top-[calc(50%-4rem)] transform -translate-x-1/2"></div>
+                <div className="w-6 h-6 bg-black rounded-full absolute left-1/2 top-0 lg:top-[calc(50%-4.5rem)] transform -translate-x-1/2"></div>
                 <div className="mt-2 lg:text-right">
                   <h3 className="text-xl font-semibold">Sep. 2022 - Jan. 2023</h3>
                   <h4 className="text-lg font-bold">Tuinexpress.nl B.V - Intern - Front-end Developer</h4>
                   <p className="text-sm md:text-base text-gray-700">Interned as a Front-end Developer and UX/UI Designer at Tuinexpress.nl, creating a landing page and exploring project possibilities for Festivalzone.</p>
-                  <div className="absolute left-1/2 top-[calc(50%-4rem)] transform -translate-x-1/2 opacity-0 scale-0" ref={addToRefs}>
+                  <div className="absolute left-1/2 top-[calc(50%-6.5rem)] transform -translate-x-1/2 opacity-0 scale-0" ref={addToRefs}>
                     <img src={TuinexpressLogo} alt="Tuinexpress Logo" className="w-20 h-auto" />
                   </div>
                 </div>
