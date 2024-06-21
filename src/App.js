@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/Header';
 import AnimRoutes from './components/AnimRoutes';
+import emailjs from 'emailjs-com';
+
+emailjs.init('n_i5bgDJXKNnqjEwM');
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,5 +36,7 @@ const App = () => {
     </Router>
   );
 };
+
+
 
 export default App;
