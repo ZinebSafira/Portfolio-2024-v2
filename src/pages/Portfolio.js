@@ -28,7 +28,7 @@ const projects = [
   { id: 4, title: "Europeveranda", description: "Leerwerk-traject website", img: EuropeVeranda, link: "/project4" },
   // Uncomment or add more projects as needed
   // { id: 5, title: "Dipped by Queen", description: "Start-up", img: DippedbyQueen, link: "/project5" },
-  { id: 6, title: "Signed Kits", description: "Design van social media posts, creëren van flyers", img: SignedKits, link: "/project6" },
+  // { id: 6, title: "Signed Kits", description: "Design van social media posts, creëren van flyers", img: SignedKits, link: "/project6" },
   // { id: 7, title: "Fontys Lectoraat - DIFLA", description: "Verbeteren en onderzoek van een bestaande oplossing", img: FontysLectoraat, link: "/project7" },
 ];
 
