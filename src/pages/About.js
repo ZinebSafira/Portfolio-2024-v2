@@ -37,7 +37,7 @@ const About = () => {
       <div className="container mx-auto h-full relative px-4 md:px-0">
         <div className="flex flex-col lg:flex-row h-full items-center justify-center gap-x-8 text-center lg:text-left lg:pt-16">
           <div className="flex-1 order-2 lg:order-none overflow-hidden">
-            <img src={WomanImg} alt="Woman" className="w-full h-auto max-h-96 lg:max-h-full" />
+            <img src={WomanImg} alt="Woman" className="w-full h-auto max-h-96 lg:max-h-full object-cover" />
           </div>
           <div className="flex-1 pt-16 pb-8 lg:pt-0 lg:pb-0 lg:w-auto z-10 flex flex-col justify-center items-center lg:items-start">
             <h1 className="h1 text-2xl md:text-3xl lg:text-4xl mb-6">About me</h1>
@@ -55,12 +55,12 @@ const About = () => {
       <div className="container mx-auto px-4 md:px-0 pt-32 pb-8">
         <h2 className="text-3xl md:text-4xl lg:text-5xl mb-8 text-center lg:text-left">Experience</h2>
         <div className="relative">
-          <div className="border-l-2 border-black absolute h-full left-1/2 transform -translate-x-1/2 lg:left-1/2 lg:translate-x-0"></div>
+          <div className="border-l-2 border-black absolute h-full left-1/2 transform -translate-x-1/2 lg:left-1/2 lg:translate-x-0 hidden md:block"></div>
           <div className="flex flex-col gap-y-12">
             <div className="relative lg:flex lg:justify-between lg:items-center" onMouseEnter={() => handleMouseEnter(0)} onMouseLeave={() => handleMouseLeave(0)}>
               <div className="order-2 lg:order-none lg:w-1/2 lg:pr-8">
-                <div className="w-6 h-6 bg-black rounded-full absolute left-1/2 top-0 lg:top-[calc(50%-4.5rem)] transform -translate-x-1/2"></div>
-                <div className="mt-2 lg:text-right">
+                <div className="w-6 h-6 bg-black rounded-full absolute left-1/2 top-0 lg:top-[calc(50%-4.5rem)] transform -translate-x-1/2 hidden md:block"></div>
+                <div className="mt-2 lg:text-right lg:pr-8">
                   <h3 className="text-xl font-semibold">2017-2021</h3>
                   <h4 className="text-lg font-bold">Stock Clerk at Albert Heijn</h4>
                   <p className="text-sm md:text-base text-gray-700">Responsible for stocking shelves, assisting customers, and maintaining store cleanliness and organization.</p>
@@ -74,8 +74,8 @@ const About = () => {
             <div className="relative lg:flex lg:justify-between lg:items-center" onMouseEnter={() => handleMouseEnter(1)} onMouseLeave={() => handleMouseLeave(1)}>
               <div className="hidden lg:block lg:w-1/2"></div>
               <div className="order-2 lg:order-none lg:w-1/2 lg:pl-8">
-                <div className="w-6 h-6 bg-black rounded-full absolute left-1/2 top-0 lg:top-[calc(50%-4.5rem)] transform -translate-x-1/2"></div>
-                <div className="mt-2">
+                <div className="w-6 h-6 bg-black rounded-full absolute left-1/2 top-0 lg:top-[calc(50%-4.5rem)] transform -translate-x-1/2 hidden md:block"></div>
+                <div className="mt-2 lg:pl-8">
                   <h3 className="text-xl font-semibold">2021 - Present</h3>
                   <h4 className="text-lg font-bold">Fresh Food Employee at Albert Heijn</h4>
                   <p className="text-sm md:text-base text-gray-700">Since 2021, I've been working as a fresh food employee at Albert Heijn, responsible for handling fresh produce and ensuring top quality service.</p>
@@ -87,8 +87,8 @@ const About = () => {
             </div>
             <div className="relative lg:flex lg:justify-between lg:items-center" onMouseEnter={() => handleMouseEnter(2)} onMouseLeave={() => handleMouseLeave(2)}>
               <div className="order-2 lg:order-none lg:w-1/2 lg:pr-8">
-                <div className="w-6 h-6 bg-black rounded-full absolute left-1/2 top-0 lg:top-[calc(50%-4.5rem)] transform -translate-x-1/2"></div>
-                <div className="mt-2 lg:text-right">
+                <div className="w-6 h-6 bg-black rounded-full absolute left-1/2 top-0 lg:top-[calc(50%-4.5rem)] transform -translate-x-1/2 hidden md:block"></div>
+                <div className="mt-2 lg:text-right lg:pr-8">
                   <h3 className="text-xl font-semibold">Sep. 2022 - Jan. 2023</h3>
                   <h4 className="text-lg font-bold">Tuinexpress.nl B.V - Intern - Front-end Developer</h4>
                   <p className="text-sm md:text-base text-gray-700">Interned as a Front-end Developer and UX/UI Designer at Tuinexpress.nl, creating a landing page and exploring project possibilities for Festivalzone.</p>
