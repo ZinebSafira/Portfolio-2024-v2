@@ -37,7 +37,11 @@ const About = () => {
       <div className="container mx-auto h-full relative px-4 md:px-0">
         <div className="flex flex-col lg:flex-row h-full items-center justify-center gap-x-8 text-center lg:text-left lg:pt-16">
           <div className="flex-1 order-2 lg:order-none overflow-hidden">
-            <img src={WomanImg} alt="Woman" className="w-full h-auto max-h-96 lg:max-h-full object-cover" />
+            <img
+              src={WomanImg}
+              alt="Woman"
+              className="w-full h-full object-cover md:max-h-96 lg:max-h-full lg:object-contain lg:rounded-lg"
+            />
           </div>
           <div className="flex-1 pt-16 pb-8 lg:pt-0 lg:pb-0 lg:w-auto z-10 flex flex-col justify-center items-center lg:items-start">
             <h1 className="h1 text-2xl md:text-3xl lg:text-4xl mb-6">About me</h1>
