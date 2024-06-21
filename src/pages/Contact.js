@@ -1,41 +1,22 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-import { motion } from 'framer-motion';
 import gsap from 'gsap';
-import WomanImg from '../img/contact/woman.png';
+import { motion } from 'framer-motion';
 import { transition1 } from '../transitions';
+import WomanImg from '../img/contact/woman.png';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ to_name: '', from_name: '', message: '', reply_to: '' });
-  const [isEmailSent, setIsEmailSent] = useState(false);
-  const formRef = useRef(null);
-  const successMessageRef = useRef(null);
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    // Email validation regex
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.reply_to)) {
-      alert('Please enter a valid email address');
-      return;
-    }
-    emailjs.send("service_4gkh9qx", "template_dq72f84", formData)
+    emailjs.sendForm('service_4gkh9qx', 'template_dq72f84', e.target, 'n_i5bgDJXKNnqjEwM')
       .then((result) => {
-        console.log('Email successfully sent!', result.text);
-        setIsEmailSent(true);
-        gsap.to(formRef.current, {
-          opacity: 0, y: -50, duration: 0.5, onComplete: () => {
-            gsap.to(successMessageRef.current, { opacity: 1, y: 0, duration: 0.5 });
-          }
-        });
+        setFormSubmitted(true);
+        gsap.to('.contact-form', { opacity: 0, duration: 0.5 });
+        gsap.to('.success-message', { opacity: 1, y: 0, duration: 0.5, delay: 0.5 });
       }, (error) => {
-        console.error('Error sending email:', error.text);
-        setIsEmailSent(false);
+        console.log(error.text);
       });
   };
 
@@ -45,43 +26,23 @@ const Contact = () => {
       animate={{ scale: 1, y: 0 }}
       exit={{ scale: 0, y: '100%' }}
       transition={transition1}
-      className='section bg-white'>
-      <div className="container mx-auto h-full">
+      className='section bg-white min-h-screen overflow-y-auto'
+    >
+      <div className="container mx-auto h-full px-4">
         <div className='flex flex-col lg:flex-row h-full items-center justify-start pt-36 gap-x-8 text-center lg:text-left'>
           <motion.div className='hidden lg:flex bg-[#eef7f9] absolute bottom-0 left-0 right-0 top top-72 -z-10'></motion.div>
           <div className='lg:flex-1 lg:pt-32 px-4'>
             <h1 className='h1'>Contact me</h1>
             <p className='mb-12'>I would love to grab a coffee with you!</p>
-            <form ref={formRef} className='flex flex-col gap-y-4' onSubmit={handleSubmit}>
-              <div className='flex gap-x-10'>
-                <input
-                  className='outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]'
-                  type='text'
-                  name='to_name'
-                  placeholder='Your name'
-                  value={formData.to_name}
-                  onChange={handleChange}
-                />
-                <input
-                  className='outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]'
-                  type='email'
-                  name='reply_to'
-                  placeholder='Your e-mail address'
-                  value={formData.reply_to}
-                  onChange={handleChange}
-                />
+            <form className='contact-form flex flex-col gap-y-4' onSubmit={sendEmail}>
+              <div className='flex flex-col lg:flex-row gap-y-4 gap-x-10'>
+                <input className='outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]' type='text' placeholder='Your name' name='from_name' required />
+                <input className='outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]' type='email' placeholder='Your e-mail address' name='reply_to' required />
               </div>
-              <input
-                className='outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]'
-                type='text'
-                name='message'
-                placeholder='Your message'
-                value={formData.message}
-                onChange={handleChange}
-              />
-              <button className='btn mb-[30px] mx-auto lg:mx-0 self-start' type='submit'>Send it</button>
+              <textarea className='outline-none border-b border-b-primary bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]' rows='5' placeholder='Your message' name='message' required></textarea>
+              <button className='btn mb-[30px] mx-auto lg:mx-0 self-start'>Send it</button>
             </form>
-            <div ref={successMessageRef} className={`${isEmailSent ? 'block' : 'hidden'}`} style={{ opacity: 0, transform: 'translateY(50px)' }}>
+            <div className='success-message opacity-0 absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
               <p>Your message is sent and I hope I can answer you shortly!</p>
             </div>
           </div>
@@ -91,10 +52,11 @@ const Contact = () => {
             exit={{ scale: 0, y: '100%' }}
             transition={{
               transition: transition1,
-              duration: 1.5,
+              duration: 1.5
             }}
-            className='lg:flex-1'>
-            <img src={WomanImg} alt='' className='w-3/4 h-auto' />
+            className='lg:flex-1 flex justify-center items-center'
+          >
+            <img src={WomanImg} alt='' className='w-full h-auto max-h-96 lg:max-h-full object-cover lg:object-contain' />
           </motion.div>
         </div>
       </div>
