@@ -32,7 +32,7 @@ const Contact = () => {
         <div className='flex flex-col lg:flex-row h-full items-center justify-start pt-36 gap-x-8 text-center lg:text-left'>
           <motion.div className='hidden lg:flex bg-[#eef7f9] absolute bottom-0 left-0 right-0 top top-72 -z-10'></motion.div>
           <div className='lg:flex-1 lg:pt-32 px-4 relative'>
-            <h1 className='h1'>Contact me</h1>
+            <h1 className='h1 mb-15'>Contact me</h1>
             <p className='mb-12'>I would love to grab a coffee with you!</p>
             <form className='contact-form flex flex-col gap-y-4' onSubmit={sendEmail}>
               <div className='flex flex-col lg:flex-row gap-y-4 gap-x-10'>
